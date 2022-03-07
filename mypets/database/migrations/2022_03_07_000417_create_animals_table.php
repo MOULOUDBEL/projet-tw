@@ -15,6 +15,12 @@ class CreateAnimalsTable extends Migration
     {
         Schema::create('animals', function (Blueprint $table) {
             $table->id();
+            $table->string('nom');
+            $table->integer('age');
+            $table->mediumText('descr');
+            $table->string('img');
+            $table->string('pathimg')->default('default.png'); //plus un path pour l'image
+
             $table->timestamps();
         });
     }
